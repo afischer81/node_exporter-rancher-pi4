@@ -22,4 +22,7 @@ function do_run {
         --collector.filesystem.ignored-mount-points "^/(sys|proc|dev|host|etc)($|/)" 
 }
 
-do_$1
+task=$1
+shift
+do_$task $*
+
